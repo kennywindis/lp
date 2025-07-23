@@ -160,7 +160,7 @@ echo "<br>";
 
 for ($fs=4;$fs>=1;$fs--){
 
-	for($o=1;$o<=$fs;$o++){
+	for($o=1;$o<=$fs;$o++){//main  loop
 		echo $o . '';
 	}
 	

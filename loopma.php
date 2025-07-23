@@ -242,11 +242,11 @@ $tot = 4;
 	  echo '&nbsp;&nbsp;';
    }
 
-	for($m=$l;$m>=1;$m--){//main loop
-		echo $m . '';
+  for($m=$l;$m>=1;$m--){//main loop
+	echo $m . '';
 	}
    
-   for ($pr= $tot-2;$pr<=$l;$pr++){//main loop
+  for ($pr= $tot-2;$pr<=$l;$pr++){//main loop
    echo  $pr. ' ';
    	
    }

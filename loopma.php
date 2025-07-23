@@ -116,6 +116,9 @@ echo "<br><br>";
 //when value of outer loop increment, inr loop complete it iteration
 //when the value of the loop variable in innr loop is TRUE it print out, but when it is FALSE nttin is printd out, it goes bk to the outr loop and start again
 
+//nested = inner loop = main loop
+//the middle/2nd condition of the nested(inner) loop is the one to obey, then follow the last condition/3rd  of the nested loop
+
 for ($q=1;$q<=10;$q++){
 echo "q=".$q.": ";
 	
@@ -230,11 +233,15 @@ for ($l=1;$l<=$tot;$l++){
 
 echo"<br><br>";
 
-//5 4 3 2 1
-//5 4 3 2
-//5 4 3
-//5 4
+//1 2 3 4 5
+//2 3 4 5
+//3 4 5
+//4 5
 //5
+
+//nested = inner loop = main loop
+
+//the middle/2nd condition of the nested(inner) loop is the one to obey, then follow the last condition/3rd  of the nested loop
 
 
 for ($frr=1;$frr<=5;$frr++){
@@ -243,7 +250,7 @@ for ($frr=1;$frr<=5;$frr++){
 		echo $yrr . '';
 	}
 	
-	//echo '<br>';
+	echo '<br>';
 	
 }
 

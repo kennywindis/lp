@@ -158,9 +158,16 @@ echo "<br>";
 // 1 2
 // 1
 
+//main loop explanation
+//first cndtn stmnt $o=1    (constant initial value)
+//second/middle cndtn stmnt $o=$fs, ($fs start frm 4 decrease/goes($fs--) to 1, when $fs = 4, $o=4, when $fs = 3, $o=3 till it gt to 1), 1<=4, 3rd/last cndtn $o++ = 1+1 this will run until it get to 4 ans = 1 2 3 4, 
+//"                 "                          "                                                                                         1<=3, 3rd/last cndtn $o++ = 1+1 this will run until it get to 3 ans = 1 2 3 
+//"                 "                          "                                                                                         1<=2, 3rd/last cndtn $o++ = 1+1 this will run until it get to 2 ans = 1 2, 
+//"                 "                          "                                                                                         1<=1, 3rd/last cndtn $o++ = 1+1 this will run until it get    1 ans = 1
+//rzn it it all ending @ 4 3 2 1 is becos 3rd cndtn stmnt must obey the 2nd cndntn stmnt($o<=$fs, $fs goes frm 4 to 1)
 for ($fs=4;$fs>=1;$fs--){
 
-	for($o=1;$o<=$fs;$o++){//main  loop
+	for($o=1;$o<=$fs;$o++){//main  loop, 
 		echo $o . '';
 	}
 	
@@ -175,9 +182,18 @@ echo '<br>';
 //3 2 1
 //4 3 2 1
 
+//main loop explanation
+//first cndtn $yk=$kk ($kkstarts frm $kk=1 to 4), so when $kk =1 $yk =1, till $kk=4 $yk=4(first condition), 
+//second cndtn $yk>=1, then 1>=1 2>=1 3>=1 4>=1, 
+//third condition $yk--,1-1=0 ans 1 0(but 0 is nt written out), 
+//  "        "          2-1=1 ans 2 1, till gt to 1
+//  "        "          3-1=2 ans 3 2 1, till  gtto 1 
+//  "        "          4-1=3 ans 4 3 2 1 , till gtto 1
+//reason why it allending @ 1 is because it must obey the second/middle condition stmnt which is ($yk>=1) must equate to 1= all 3rd cndtn  will all run till it gt to =1
+  
 for ($kk=1;$kk<=4;$kk++){
 
-	for($yk=$kk;$yk>=1;$yk--){
+	for($yk=$kk;$yk>=1;$yk--){//main loop, 
 		echo $yk . '';
 	}
 	
@@ -192,10 +208,17 @@ echo '<br>';
 //4 3
 //4
 
+//main loop explntn
+//1st condition stmnt $yr = 4 (constant initial value)
+//2nd/middle condition stmnt $yr>=$fr($fr start frm 1 to 4),so when 4>=1  3rd cndtn stmnt $yr-- 4-1 =3 till it get to 1 ans 4 3 2 1, 
+// "   "       "                                               when 4>=2  3rd cndtn stmnt $yr-- 4-1 =3 till it get to 2 ans 4 3 2                                                            
+// "   "       "                                               when 4>=3  3rd cndtn stmnt $yr-- 4-1 =3 till it get to 3 ans 4 3        
+// "   "       "                                               when 4>=4  3rd cndtn stmnt $yr-- 4-1 =3 till gt 4 ans 4
+//rzn it all ending @ 1, 2, 3, 4 it mst obey the 2nd/middle cndtn stmnt ($yr>=$fr), when 4>=1 3rd cndtn must obey till it gt to 1, when 4>=2 3rd cndtn must obey till it gt to 2 and so on
 
 for ($fr=1;$fr<=4;$fr++){
 
-	for($yr=4;$yr>=$fr;$yr--){
+	for($yr=4;$yr>=$fr;$yr--){//main loop
 		echo $yr . '';
 	}
 	
@@ -212,24 +235,24 @@ echo '<br>';
 
 $tot = 4;
 
-for ($l=1;$l<=$tot;$l++){
+  for ($l=1;$l<=$tot;$l++){//outr loop
 
- for ($pp=$tot-1;$pp>=$l;$pp--){
+     for ($pp=$tot-1;$pp>=$l;$pp--){
 	
-	echo '&nbsp;&nbsp;';
-}
+	  echo '&nbsp;&nbsp;';
+   }
 
-	for($m=$l;$m>=1;$m--){
+	for($m=$l;$m>=1;$m--){//main loop
 		echo $m . '';
 	}
    
-   for ($pr= $tot-2;$pr<=$l;$pr++){
+   for ($pr= $tot-2;$pr<=$l;$pr++){//main loop
    echo  $pr. ' ';
    	
    }
 	
 	echo '<br>';
-}
+   }
 
 echo"<br><br>";
 
@@ -239,6 +262,17 @@ echo"<br><br>";
 //4 5
 //5
 
+//main loop explntn
+//1st condition stmnt $yrr = $frr   (initial value)
+//2nd/middle condition stmnt $yrr<=5 ($frr start frm 1 to 5),so when 1<=5  3rd cndtn stmnt $yrr++ 1+1 =2 start frm 1 till it get to 5 ans 1 2 3 4 5, 
+// "   "       "                                                when 2<=5  3rd cndtn stmnt $yrr++ 2+1 =3 start frm 2 till it get to 5 ans 2 3 4 5                                                            
+// "   "       "                                                when 3<=5  3rd cndtn stmnt $yrr++ 3+1 =4 start frm 3 till it get to 5 ans 3 4 5       
+// "   "       "                                                when 4<=5  3rd cndtn stmnt $yrr++ 4+1 =5 start frm 4 till it gt  to 5 ans 4 5
+// "   "       "                                                when 5<=5  3rd cndtn stmnt $yrr++ 5+=5   start frm 5         gt  to 5 ans 5
+//rzn it all ending @ 5 it mst obey the 2nd/middle cndtn stmnt ($yrr<=5), when 1<=5 3rd cndtn must obey/run till it gt to 5, when 2<=5 3rd cndtn must obey/run till it gt to 5 and so on
+
+
+
 //nested = inner loop = main loop
 
 //the middle/2nd condition of the nested(inner) loop is the one to obey, then follow the last condition/3rd  of the nested loop
@@ -246,7 +280,7 @@ echo"<br><br>";
 
 for ($frr=1;$frr<=5;$frr++){
 
-	for($yrr=$frr;$yrr<=5;$yrr++){
+	for($yrr=$frr;$yrr<=5;$yrr++){//main loop
 		echo $yrr . '';
 	}
 	
